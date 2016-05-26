@@ -21,13 +21,10 @@ class NavigationSection
 
   def open_mobile_catalog(brand)
     mobiles_link
-<<<<<<< HEAD
+
 sleep(7)
-    #check_brand_checkbox
-=======
-sleep(5000)
-    check_brand_checkbox
->>>>>>> origin/master
+
+
     # t =@browser.checkboxes(xpath: '//li//input[@class="i-checkbox__real"]')
    #"#{ }"#t = brand_checkbox
    x = brand_checkboxes_elements.first do  |x|
