@@ -54,6 +54,7 @@ def start_browser
       #profile.add_extension "features/support/JSErrorCollector.xpi"
       #profile.add_extension "features/support/flashblock.xpi" unless ENABLE_FLASH
       browser = Watir::Browser.new(DRIVER, profile: profile, http_client: client)
+      browser.window.resize_to(1600, 1200)
 
     when :chrome
       puts "Launching chrome"
