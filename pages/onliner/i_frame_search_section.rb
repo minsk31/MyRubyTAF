@@ -1,24 +1,32 @@
 class IFrameSearchSection
   include PageObject
-  #in_iframe(:class => 'modal-iframe') do |iframe|
-   # text_field(:my, :class => 'product__description', :frame => iframe)
-  #end
 
-  div(:mydiv, :class => 'product__details')
-  div(:myspan,  class:"product__title")
-def result
-f = self.myspan
+  text_field(:search, xpath: "//*[@class='fast-search__input']")
 
-  texts = @browser.divs(:class => "product__price").map do |span|
-    span.text
+  in_iframe(:index => 1) do |iframe|
+    links(:product_links, class: "product__title-link",:frame => iframe)
+    spans(:prices_spans, xpath:"//div[@class='schema-product__price']//span", :frame => iframe)
+  end
 
+
+
+  def search_for(keyword)
+    self.search = keyword
 
   end
-  frame = @browser.frame(:index => 1)
-  t= "test"
-  @browser.text_field(class: "fast-search__input").set("Sony")
- # iframe = driver.find_element(:tag_name => "iframe")
- # driver.switch_to.frame(iframe)
-t= "test"
+
+  def open_detail_link(link_text)
+
+    in_frame(xpath: "//*[@id='vk_groups']//iframe") do |iframe|
+      elem = link_element(:xpath => "//*")
+      elem.click
+    end
+
+  end
+  def result
+    f = self.myspan
+    texts = @browser.divs(:class => "product__price").map do |span|
+      span.text
+    end
   end
 end
