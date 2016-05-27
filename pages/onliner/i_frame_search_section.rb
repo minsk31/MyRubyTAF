@@ -17,8 +17,8 @@ class IFrameSearchSection
 
   def open_detail_link(link_text)
 
-    in_frame(xpath: "//*[@id='vk_groups']//iframe") do |iframe|
-      elem = link_element(:xpath => "//*")
+    in_iframe(xpath: '//*[@id="vk_groups"]//iframe') do |iframe|
+      elem = link_element(id: 'join_community', frame: iframe)
       elem.click
     end
 
