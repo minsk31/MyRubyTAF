@@ -8,6 +8,10 @@ class IFrameSearchSection
     spans(:prices_spans, xpath:"//div[@class='schema-product__price']//span", :frame => iframe)
   end
 
+  in_iframe(xpath: '//*[@class="modal-iframe"]') do |iframe|
+    links(:the_links,class: 'product__title-link', frame: iframe)
+  end
+
 
 
   def search_for(keyword)
@@ -17,16 +21,18 @@ class IFrameSearchSection
 
   def open_detail_link(link_text)
 
-    in_iframe(xpath: '//*[@id="vk_groups"]//iframe') do |iframe|
-      elem = link_element(id: 'join_community', frame: iframe)
+
+      elem = the_links_elements.find {|item| item = link_text}
       elem.click
     end
 
-  end
+
   def result
     f = self.myspan
     texts = @browser.divs(:class => "product__price").map do |span|
       span.text
     end
   end
+
+
 end

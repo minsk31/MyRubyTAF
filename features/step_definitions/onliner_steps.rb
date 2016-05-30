@@ -36,6 +36,9 @@ And(/^Take a look for "([^"]*)" details$/) do |link_text|
   end
 end
 
-Then(/^"([^"]*)" details are opened$/) do |arg|
-  pending
+Then(/^"([^"]*)" details are opened$/) do |item_title|
+  on_page OnlinerMainPage do |page|
+    result =  page.isItemDetailsPresented(item_title)
+    (result.should == true)
+  end
 end
