@@ -25,6 +25,8 @@ require 'open3'
 require 'diffy'
 require 'base64'
 require 'awesome_print'
+require_relative '../../helpers/screen_shot_helper'
+require_relative '../../helpers/report_generator'
 
 
 $: << File.dirname(__FILE__)+'/../../pages'
@@ -121,8 +123,8 @@ After do |scenario|
       Dir::mkdir('screenshots') if not File.directory?('screenshots')
       screenshot = "./screenshots/FAILED_#{(0..8).to_a.map{|a| rand(16).to_s(16)}.join}.png"
       @browser.driver.save_screenshot(screenshot)
-      embed screenshot, 'image/png'
-
+       embed screenshot, 'image/png'
+      ScreenShotHelper.save_to_preview(@browser, scenario.name)
       #Записываем URL
       embed screenshot, "image/png", "</a>Page: <a href='#{@browser.url}'>#{@browser.url}</a><a"
 
@@ -147,6 +149,7 @@ if(FAIL_FAST)
 end
 
 at_exit do
+  ReportGenerator.generate_preview_report
   browser.quit if browser
   headless.destroy if HEADLESS
 end

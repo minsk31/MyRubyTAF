@@ -1,0 +1,137 @@
+[
+  {
+    "uri": "features/onliner.feature",
+    "id": "onliner",
+    "keyword": "Feature",
+    "name": "Onliner",
+    "description": "",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@onliner",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 5,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/env.rb:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21002000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on Onliner page",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/onliner_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6588659000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/env.rb:114"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1146115000
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "onliner;check-htc-mobiles-availiability-less-the-4500000",
+        "keyword": "Scenario",
+        "name": "Check htc mobiles availiability less the 4500000",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@onliner",
+            "line": 2
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I search for \"lg\" mobile phone in catalogue",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/onliner_steps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8669867000
+            },
+            "after": [
+              {
+                "output": [
+                  "DEBUG: Page <a href='http://catalog.onliner.by/mobile?mfr%5B0%5D=lg'>http://catalog.onliner.by/mobile?mfr%5B0%5D=lg</a>, Loaded in 8 sec,  step complete in 9.1 sec"
+                ],
+                "match": {
+                  "location": "features/support/env.rb:114"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 451045000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "\"lg\" presents on catalog  with price less then \"45000\"",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/onliner_steps.rb:19"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "expected: true\n     got: false (using ==) (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/onliner_steps.rb:22:in `block (2 levels) in <top (required)>'\n./features/step_definitions/onliner_steps.rb:20:in `/^\"([^\"]*)\" presents on catalog  with price less then \"([^\"]*)\"$/'\nfeatures/onliner.feature:10:in `Then \"lg\" presents on catalog  with price less then \"45000\"'",
+              "duration": 1791179000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/env.rb:114"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/env.rb:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2129213000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

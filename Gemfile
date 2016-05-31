@@ -16,3 +16,4 @@ gem 'diffy'
 gem 'syntax'
 gem 'awesome_print'
 gem 'chronic'
+gem "mini_magick"

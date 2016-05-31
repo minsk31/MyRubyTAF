@@ -1,0 +1,132 @@
+[
+  {
+    "uri": "features/onliner.feature",
+    "id": "onliner",
+    "keyword": "Feature",
+    "name": "Onliner",
+    "description": "",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@onliner",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 5,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/env.rb:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22002000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on Onliner page",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/onliner_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30072006000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/env.rb:114"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 524052000
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "onliner;check-htc-mobiles-availiability-less-the-4500000",
+        "keyword": "Scenario",
+        "name": "Check htc mobiles availiability less the 4500000",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@onliner",
+            "line": 2
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I search for \"lg\" mobile phone in catalogue",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/onliner_steps.rb:13"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "unable to locate element, using {:id=>\"fast-search\"} (Watir::Exception::UnknownObjectException)\n./pages/onliner/navigation_section.rb:20:in `open_mobile_catalog'\n./features/step_definitions/onliner_steps.rb:15:in `block (2 levels) in <top (required)>'\n./features/step_definitions/onliner_steps.rb:14:in `/^I search for \"([^\"]*)\" mobile phone in catalogue$/'\nfeatures/onliner.feature:9:in `When I search for \"lg\" mobile phone in catalogue'",
+              "duration": 3156316000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/env.rb:114"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "\"lg\" presents on catalog  with price less then \"45000\"",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/onliner_steps.rb:19"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/env.rb:114"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/env.rb:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 937094000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

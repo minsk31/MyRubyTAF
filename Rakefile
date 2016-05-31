@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'cucumber'
 require 'cucumber/rake/task'
-
+REPORTPATH = "./reports/"
 # Automatic rerun stuff
 def run_rake_task(name)
   begin
@@ -20,8 +20,8 @@ Cucumber::Rake::Task.new(:rerun) do |task|
   task.cucumber_opts = ["@rerun.txt",
                         "-r features",
                         "--format junit --out junit",
-                        "--format html  --out cucumber_rerun.html",
-                        "--format json  --out cucumber_rerun.json",
+                        "--format html  --out "+REPORTPATH+"cucumber_rerun.html",
+                        "--format json  --out "+REPORTPATH+"cucumber_rerun.json",
                         "--format pretty --color"]
 end
 
@@ -39,8 +39,8 @@ end
 
 Cucumber::Rake::Task.new(:all_rerun) do |task|
   task.cucumber_opts = ["--format junit --out junit",
-                        "--format html  --out cucumber.html",
-                        "--format json  --out cucumber.json",
+                        "--format html  --out "+REPORTPATH+"cucumber.html",
+                        "--format json  --out "+REPORTPATH+"cucumber.json",
                         "-f rerun --out rerun.txt",
                         "--format pretty --color",
                         "features"]
@@ -48,8 +48,8 @@ end
 
 Cucumber::Rake::Task.new(:all_no_rerun) do |task|
   task.cucumber_opts = ["--format junit --out junit",
-                        "--format html  --out cucumber.html",
-                        "--format json  --out cucumber.json",
+                        "--format html  --out "+REPORTPATH+"cucumber.html",
+                        "--format json  --out "+REPORTPATH+"cucumber.json",
                         "--format pretty --color",
                         "features"]
 end
@@ -58,8 +58,8 @@ Cucumber::Rake::Task.new(:tag_no_rerun) do |task|
   task.cucumber_opts = ["-r features",
                         "-t @#{ENV['TAG'] || "all"}",
                         "--format junit --out junit",
-                        "--format html  --out cucumber.html",
-                        "--format json  --out cucumber.json",
+                        "--format html  --out "+REPORTPATH+"cucumber.html",
+                        "--format json  --out "+REPORTPATH+"cucumber.json",
                         "-f rerun --out rerun.txt",
                         "--format pretty --color"]
 end
