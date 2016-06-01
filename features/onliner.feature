@@ -13,4 +13,4 @@ Feature: Onliner
  Scenario: Open item details using quick search
    When I search for "HTC Desire 626G White" item use quick search
    When Take a look for "HTC Desire 626G White" details
-   Then "Смартфон!!!! HTC Desire 626G White" details are opened
+   Then "Смартфон HTC Desire 626G White" details are opened
