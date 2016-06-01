@@ -22,11 +22,11 @@ class ReportGenerator
     files =  Dir["./#{ThumbPath}/*"]
 
     files.each do |filename|
-      #image = MiniMagick::Image.open(filename)
-      #image.path #=> "/var/folders/k7/6zx6dx6x7ys3rv3srh0nyfj00000gn/T/magick20140921-75881-1yho3zc.jpg"
-      #image.resize "640x480"
-      #image.format "png"
-      #image.write filename
+      image = MiniMagick::Image.open(filename)
+      image.path #=> "/var/folders/k7/6zx6dx6x7ys3rv3srh0nyfj00000gn/T/magick20140921-75881-1yho3zc.jpg"
+      image.resize "800x640"
+      image.format "png"
+      image.write filename
      # outfile = FastImage.resize(filename, 50, 50)
     end
 
