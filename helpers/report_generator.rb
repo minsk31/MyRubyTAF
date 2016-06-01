@@ -27,7 +27,7 @@ class ReportGenerator
       #image.resize "640x480"
       #image.format "png"
       #image.write filename
-      outfile = FastImage.resize(filename, 50, 50)
+     # outfile = FastImage.resize(filename, 50, 50)
     end
 
 
