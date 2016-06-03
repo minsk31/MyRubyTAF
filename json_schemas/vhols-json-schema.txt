@@ -1,0 +1,281 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Root schema.",
+  "description": "An explanation about the purpose of this instance.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "title": "Href schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "href"
+    },
+    "locationId": {
+      "type": "string",
+      "title": "LocationId schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "locationId"
+    },
+    "locationTypeId": {
+      "type": "string",
+      "title": "LocationTypeId schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "locationTypeId"
+    },
+    "index": {
+      "type": "integer",
+      "title": "Index schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "index"
+    },
+    "locationDescription": {
+      "type": "string",
+      "title": "LocationDescription schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "locationDescription"
+    },
+    "locationUrlDescription": {
+      "type": "string",
+      "title": "LocationUrlDescription schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "locationUrlDescription"
+    },
+    "parentLocationUrlDescription": {
+      "type": "string",
+      "title": "ParentLocationUrlDescription schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "parentLocationUrlDescription"
+    },
+    "locationUrl": {
+      "type": "string",
+      "title": "LocationUrl schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "locationUrl"
+    },
+    "bookingTypeId": {
+      "type": "string",
+      "title": "BookingTypeId schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "bookingTypeId"
+    },
+    "searchable": {
+      "type": "boolean",
+      "title": "Searchable schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "searchable"
+    },
+    "browsable": {
+      "type": "boolean",
+      "title": "Browsable schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "browsable"
+    },
+    "locationMetadata": {
+      "type": "object",
+      "title": "LocationMetadata schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "ecmsId": {
+          "type": "null",
+          "title": "EcmsId schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "id": "ecmsId"
+        },
+        "browsable": {
+          "type": "boolean",
+          "title": "Browsable schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "id": "browsable"
+        },
+        "ecmsName": {
+          "type": "null",
+          "title": "EcmsName schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "id": "ecmsName"
+        },
+        "onSaleEnd": {
+          "type": "null",
+          "title": "OnSaleEnd schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "id": "onSaleEnd"
+        },
+        "gateway": {
+          "type": "null",
+          "title": "Gateway schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "id": "gateway"
+        },
+        "tbxName": {
+          "type": "null",
+          "title": "TbxName schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "id": "tbxName"
+        },
+        "boost": {
+          "type": "integer",
+          "title": "Boost schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "id": "boost"
+        },
+        "telephoneBookingOnly": {
+          "type": "boolean",
+          "title": "TelephoneBookingOnly schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "id": "telephoneBookingOnly"
+        },
+        "searchable": {
+          "type": "boolean",
+          "title": "Searchable schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "id": "searchable"
+        }
+      },
+      "id": "locationMetadata",
+      "required": [
+        "ecmsId",
+        "browsable",
+        "ecmsName",
+        "onSaleEnd",
+        "gateway",
+        "tbxName",
+        "boost",
+        "telephoneBookingOnly",
+        "searchable"
+      ]
+    },
+    "hierarchyLevel": {
+      "type": "integer",
+      "title": "HierarchyLevel schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "hierarchyLevel"
+    },
+    "parentLocationId": {
+      "type": "string",
+      "title": "ParentLocationId schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "parentLocationId"
+    },
+    "parentLocationDescription": {
+      "type": "string",
+      "title": "ParentLocationDescription schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "parentLocationDescription"
+    },
+    "parentLocationHierarchyId": {
+      "type": "string",
+      "title": "ParentLocationHierarchyId schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "parentLocationHierarchyId"
+    },
+    "parentDescriptionForDisplay": {
+      "type": "string",
+      "title": "ParentDescriptionForDisplay schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "parentDescriptionForDisplay"
+    },
+    "parentEcmsId": {
+      "type": "null",
+      "title": "ParentEcmsId schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "parentEcmsId"
+    },
+    "indexedDescription": {
+      "type": "string",
+      "title": "IndexedDescription schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "indexedDescription"
+    },
+    "details": {
+      "type": "object",
+      "title": "Details schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "openingTimes": {
+          "type": "array",
+          "title": "OpeningTimes schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "items": {
+            "type": "object",
+            "title": "6 schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+              "isoDayOfWeek": {
+                "type": "integer",
+                "title": "IsoDayOfWeek schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "id": "isoDayOfWeek"
+              },
+              "start": {
+                "type": "string",
+                "title": "Start schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "id": "start"
+              },
+              "end": {
+                "type": "string",
+                "title": "End schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "id": "end"
+              },
+              "dayOfWeek": {
+                "type": "string",
+                "title": "DayOfWeek schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "id": "dayOfWeek"
+              }
+            },
+            "id": "6",
+            "required": [
+              "isoDayOfWeek",
+              "start",
+              "end",
+              "dayOfWeek"
+            ]
+          },
+          "id": "openingTimes"
+        },
+        "carLocationId": {
+          "type": "string",
+          "title": "CarLocationId schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "id": "carLocationId"
+        },
+        "cityName": {
+          "type": "string",
+          "title": "CityName schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "id": "cityName"
+        }
+      },
+      "id": "details",
+      "required": [
+        "openingTimes",
+        "carLocationId",
+        "cityName"
+      ]
+    }
+  },
+  "id": "/",
+  "required": [
+    "href",
+    "locationId",
+    "locationTypeId",
+    "index",
+    "locationDescription",
+    "locationUrlDescription",
+    "parentLocationUrlDescription",
+    "locationUrl",
+    "bookingTypeId",
+    "searchable",
+    "browsable",
+    "locationMetadata",
+    "hierarchyLevel",
+    "parentLocationId",
+    "parentLocationDescription",
+    "parentLocationHierarchyId",
+    "parentDescriptionForDisplay",
+    "parentEcmsId",
+    "indexedDescription",
+    "details"
+  ]
+}

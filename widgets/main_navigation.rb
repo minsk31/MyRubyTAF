@@ -7,15 +7,17 @@ class MainNavigation < PageObject::Elements::Div
 
   def catalog
     s =span_elements
-  el = span_elements.first
-  el.click
+   element = span_elements.find do |el|
+      el.text == CatalogLinkText
+    end
+  element.click
   end
 
   def news
     self.class.spans(:span,class:'b-main-navigation__text')
 
     el = span_elements.find do |element|
-      element == NewsLinkText
+      element.text == NewsLinkText
     end
     el.click
   end

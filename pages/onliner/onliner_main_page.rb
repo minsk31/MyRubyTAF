@@ -10,6 +10,8 @@ class OnlinerMainPage
   h2(:item_title, css: "h2.catalog-masthead__title")
   main_nav(:main_nav_panel, class:"b-top-navigation")
   div(:catalog_nav, class:"catalog-navigation")
+  elements(:news_nav, :header, class:"b-main-page-blocks-header-2 cfix")
+
 
   def isItemDetailsPresented(item_text)
 
