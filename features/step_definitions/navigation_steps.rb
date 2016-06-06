@@ -24,6 +24,6 @@ Then(/^I should be on news page$/) do
      page.news_nav_elements.each do |item|
       links.push(item.text)
      end
-   links.include?("ЛЮДИ"&&"МНЕНИЯ"&&"ЯБЛОКО").should == true
+   links.include?("ЛЮДИ"&&"МНЕНИЯ").should == true
   end
 end
