@@ -17,3 +17,8 @@ Then /"([^\"]*)" is present on the results page/ do |result|
   end
 end
 
+Then /"([^\"]*)" is present on the results page test git/ do |result|
+  on_page ResultsPage do |page|
+    results = page.results
+    results.include?(result).should == true
+  end
